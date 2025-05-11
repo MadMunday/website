@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"><script>
-  if (location.hostname === 'www.madmunday.com') {
-    window.location.href = 'https://madmunday.com';
-  }
-</script>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MadMunday</title>
+
+  <!-- Redirect www to non-www -->
+  <script>
+    if (location.hostname === 'www.madmunday.com') {
+      window.location.href = 'https://madmunday.com';
+    }
+  </script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -50,14 +54,13 @@
     }
   </style>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38500279"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-38500279
-'); // Replace with your actual GA Measurement ID
+    gtag('config', 'G-38500279');
   </script>
 </head>
 <body>
@@ -73,14 +76,14 @@
   </div>
 
   <div>
-    <!-- PayPal Button Embed -->
+    <!-- ✅ PayPal Button Embed -->
     <script 
       src="https://www.paypal.com/sdk/js?client-id=BAAFAzFLwjVujRzLmZqtQo6md0y2lv8KqlYMz0j7dPUfqO5OxpYV4Ts1NtfqnloANdCwJvPBeOQCTlueAY&components=hosted-buttons&enable-funding=venmo&currency=USD">
     </script>
     <div id="paypal-container"></div>
     <script>
       paypal.HostedButtons({
-        hostedButtonId: "GSZCLG4S4WHPW" // Replace this with your actual hosted button ID from PayPal
+        hostedButtonId: "GSZCLG4S4WHPW"
       }).render("#paypal-container");
     </script>
   </div>
